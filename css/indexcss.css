@@ -1,0 +1,185 @@
+body{
+    background: url(/images/pexels-lisa-fotios-776538.jpg) no-repeat center center fixed;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/*-----------------------------------*/
+
+::-webkit-scrollbar{
+    width: 10px;    
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #e0bbe4;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/*------------------------------------*/
+
+@keyframes blinker{
+    50%{
+        opacity: 0;
+    }
+}
+
+
+.part1{
+    width: 100%;
+    position: relative;
+}
+
+.part1-1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonp1{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0px 0px 3px white;
+}
+
+.blink_me:hover{
+    animation: blinker 1.3s linear infinite;
+}
+
+.icons{
+    margin: 10px;
+    color: white;
+    font-size: 37px;
+    text-shadow: 0px 0px 3px white;
+}
+
+
+.socialicons{
+    position: fixed;
+    bottom: 40px;
+    left:75px;
+    right: 0;
+}
+
+.login{
+    position: fixed;
+    width: 200px;
+    top: 685px;
+    left:85px;
+}
+
+.loginbutton{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-shadow: 0px 0px 3px white;
+}
+ /*----------------------------------------------*/
+.zum:hover{
+    transform: scale(1.2); 
+}
+
+.onscroll{
+    position: relative;
+    color: white;
+    width: 100%;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.XD1{
+    position: absolute;
+    transition: transform .4s;
+    text-shadow: 0px 0px 3px black;
+    font-size: 150px;
+    position: absolute;
+    cursor: pointer;
+    left: 100px;
+    top: 200px;
+}
+
+.XD2{
+    position: absolute;
+    transition: transform .4s;
+    text-shadow: 0px 0px 3px black;
+    font-size: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: 380px;
+    left: 110px;
+}
+
+.XD3{
+    position: absolute;
+    transition: transform .4s;
+    text-shadow: 0px 0px 3px black;
+    font-size: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 610px;
+    left: 720px;
+}
+
+/*------------------------------------------*/
+
+.piedepagina{
+    padding: 50px 50px;
+    text-align: center;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.textbottom{
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 0px 2px white;
+}
+/*-------------------------------------------*/
+.gallery{
+    padding-top: 810px;
+    align-content: center;
+    text-align: center;
+    color: white;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 80px;
+    text-shadow: 0px 0px 3px black;
+}
+
+.gallery p{
+    padding: 100px 100px;
+}
+
+.aportacion1 img{
+    transition: transform .4s;
+    margin: 50px;
+    border: 5px solid white;
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.3); 
+    border-radius: 50px;
+}
+
+
+.aportacion1 img:hover{
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.ancla a{
+    display: flex;
+    justify-content: center;
+    padding: 50px 50px;
+    color: white;
+    text-decoration: none;
+    font-size: 30px;
+    font-family: 'Montserrat',sans-serif;
+    text-shadow: 0px 0px 3px white;
+}
