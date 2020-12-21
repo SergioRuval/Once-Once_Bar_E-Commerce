@@ -76,6 +76,7 @@
                     <form action="" method="post">
 
                         <input type="hidden" name="id" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY); ?>">
+                        <input type="hidden" name="cantidad" value="<?php echo openssl_encrypt($producto['CANTIDAD'],COD,KEY); ?>">
 
                         <button 
                         class="btn btn-warning" type="submit"

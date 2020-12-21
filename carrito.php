@@ -35,8 +35,10 @@ if(isset($_POST['btnAccion'])){
             }
 
             //Valida que no se haya incluido un valor externo a Cantidad encriptada
-            if(is_numeric(openssl_decrypt($_POST['cantidad'],COD,KEY))){
-                $CANTIDAD=openssl_decrypt($_POST['cantidad'],COD,KEY);
+            //if(is_numeric(openssl_decrypt($_POST['cantidad'],COD,KEY))){
+            if(is_numeric($_POST['cantidad'])){
+                //$CANTIDAD=openssl_decrypt($_POST['cantidad'],COD,KEY);
+                $CANTIDAD=$_POST['cantidad'];
                 $mensaje.="Cantidad Correcto ".$CANTIDAD."<br>";
             }
             else{
@@ -85,12 +87,17 @@ if(isset($_POST['btnAccion'])){
             case 'Eliminar':
                 if(is_numeric(openssl_decrypt($_POST['id'],COD,KEY))){
                     $ID=openssl_decrypt($_POST['id'],COD,KEY);
+                    $CANTIDAD=openssl_decrypt($_POST['cantidad'],COD,KEY);
                     //Vamos a buscar el producto que se va a eliminar en array de SESSION
                     foreach($_SESSION['CARRITO'] as $i=>$producto){
                         if($producto['ID']==$ID){
-                            unset($_SESSION['CARRITO'][$i]);
-                            echo "<script>alert('Producto eliminado...');</script>";
-
+                            //Cuando se eligió una cantidad mayor a 1 de un mismo producto
+                            if($CANTIDAD >= 2){
+                                $_SESSION['CARRITO'][$i]['CANTIDAD']=$CANTIDAD-1;
+                            }else{
+                                unset($_SESSION['CARRITO'][$i]);
+                                echo "<script>alert('Producto eliminado...');</script>";
+                            }
                         }
                     }
                 }else{
