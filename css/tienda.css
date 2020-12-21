@@ -131,3 +131,18 @@ body{
     top: 610px;
     left: 720px;
 }
+
+/*------------------------------------------*/
+
+.piedepagina{
+    padding: 50px 50px;
+    text-align: center;
+    font-family: 'Montserrat';
+    cursor: pointer;
+}
+
+.textbottom{
+    font-size: 30px;
+    color: white;
+    text-shadow: 0px 0px 2px white;
+}

@@ -1,6 +1,7 @@
 <?php
     include 'global/config.php';
     include 'global/conexion.php';
+    include 'carrito.php';
 ?>
 
 <!DOCTYPE html>
@@ -38,14 +39,14 @@
             <p><a href="formulario.html" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
             <p><a href="ayuda.html" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
             <p><a href="tienda.php" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
-            <p><a href="#" class="buttonp1 blink_me"><strong><i class="fas fa-shopping-basket"></i> (0)</strong></a></p>
+            <p><a href="showCarrito.php" class="buttonp1 blink_me"><strong><i class="fas fa-shopping-basket"></i> (0)</strong></a></p>
         </div>
     </div>
 
     <div class="container">
         <br>
         <div class="alert alert-success">
-            Pantalla de mensaje...
+            <?php echo $mensaje; ?>
             <a href="#" class="badge badge-success">Ver carrito</a>
         </div>
 
@@ -66,17 +67,32 @@
                         class="card-img-top" 
                         src="<?php echo $bebida['Img'];?>" 
                         data-toggle="popover"
-                          
-                        data-content="<?php echo $bebida['Descripcion'];?>"
+                        data-content="<?php echo $bebida['Descripcion'];?>" 
+                        height="350px"
                         >
                         <div class="card-body">
                             <span><?php echo $bebida['Nombre']; ?></span>
                             <h5 class="card-title">$<?php echo $bebida['Precio']; ?></h5>
                             <p class="card-text">Existencia: <?php echo $bebida['Existencia']; ?></p>
                             
-                            <button class="btn btn-primary" name="btnAccion" value="Agregar" type="submit">
-                                Agregar al carrito
-                            </button>
+                            <!-- Enviar la información del producto -->
+                            <form action="" method="post">
+                                <input type="hidden" name="id" id="id" value="<?php echo openssl_encrypt($bebida['IDBebida'],COD,KEY); ?>">
+                                <input type="hidden" name="nombre" id="nombre" value="<?php echo openssl_encrypt($bebida['Nombre'],COD,KEY); ?>">
+                                <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($bebida['Precio'],COD,KEY); ?>">
+                                <input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,COD,KEY); ?>">
+
+                                <button class="btn btn-primary" 
+                                name="btnAccion" 
+                                value="Agregar" 
+                                type="submit"
+                                >
+                                    Agregar al carrito
+                                </button>
+
+                            </form>
+
+                            
                         </div>
                     </div>
                 </div>
@@ -94,6 +110,6 @@
                 })
         });
     </script>
-
+    
 </body>
 </html>
