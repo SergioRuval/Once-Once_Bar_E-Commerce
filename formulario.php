@@ -5,6 +5,7 @@
     <title>ONCE:ONCE</title>
     
     <link rel="stylesheet" href="css/formulario.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -19,13 +20,11 @@
 </head>
 <body>
     
-    <div class="part1">
+    <div class="navbar">
         
-            <p><a href="index.html" class="buttonp1 blink_me"><strong><i class="fas fa-home fa-lg"></i></strong></a></p>
-            <p><a href="aboutus.html" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
-            <p><a href="formulario.html" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
-            <p><a href="ayuda.html" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
-            <p><a href="#" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
+        <?php
+            require("./php/navbarCliente.php");
+        ?>
         
     </div>
 
@@ -62,7 +61,8 @@
     <div class="faq1">
         <p class="textfaq1"><strong><span>C</span><span>o</span><span>n</span><span>t</span><span>á</span><span>c</span><span>t</span><span>a</span><span>n</span><span>o</span><span>s</span></strong></p>
     </div>
-    <script src="/js/zoomin.js"></script>
+
+    <script src="js/zoomin.js"></script>
     
     <div class="maps">
         <div class="maps2"><p class="mapstext zoom"><strong>Ven y visítanos a Orozco y Jiménez 560, Alcaldes, 47474 Lagos de Moreno, Jal.</strong></p></div>
