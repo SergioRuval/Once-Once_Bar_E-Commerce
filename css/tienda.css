@@ -1,0 +1,133 @@
+body{
+    /*background: url(../images/pexels-lisa-fotios-776538.jpg) no-repeat center center fixed;*/
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #555;
+}
+
+/*-----------------------------------*/
+
+::-webkit-scrollbar{
+    width: 10px;    
+}
+
+::-webkit-scrollbar-track{
+    background: black;
+}
+
+::-webkit-scrollbar-thumb{
+    background: #e0bbe4;
+    border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555; 
+}
+
+/*------------------------------------*/
+
+@keyframes blinker{
+    50%{
+        opacity: 0;
+    }
+}
+
+
+.part1{
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.part1-1{
+    display: flex;
+    justify-content: space-around;
+}
+
+.buttonp1{
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: 'Montserrat', sans-serif;
+    text-shadow: 0px 0px 3px white;
+}
+
+.blink_me:hover{
+    animation: blinker 1.3s linear infinite;
+}
+
+.icons{
+    margin: 10px;
+    color: white;
+    font-size: 37px;
+    text-shadow: 0px 0px 3px white;
+}
+
+
+.socialicons{
+    position: fixed;
+    bottom: 40px;
+    left:75px;
+    right: 0;
+}
+
+.login{
+    position: fixed;
+    width: 200px;
+    top: 685px;
+    left:85px;
+}
+
+.loginbutton{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    text-shadow: 0px 0px 3px white;
+}
+ /*----------------------------------------------*/
+.zum:hover{
+    transform: scale(1.2); 
+}
+
+.onscroll{
+    position: relative;
+    color: white;
+    width: 100%;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.XD1{
+    position: absolute;
+    transition: transform .4s;
+    text-shadow: 0px 0px 3px black;
+    font-size: 150px;
+    position: absolute;
+    cursor: pointer;
+    left: 100px;
+    top: 200px;
+}
+
+.XD2{
+    position: absolute;
+    transition: transform .4s;
+    text-shadow: 0px 0px 3px black;
+    font-size: 30px;
+    position: absolute;
+    cursor: pointer;
+    top: 380px;
+    left: 110px;
+}
+
+.XD3{
+    position: absolute;
+    transition: transform .4s;
+    text-shadow: 0px 0px 3px black;
+    font-size: 40px;
+    position: absolute;
+    cursor: pointer;
+    top: 610px;
+    left: 720px;
+}
