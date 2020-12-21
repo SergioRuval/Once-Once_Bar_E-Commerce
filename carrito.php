@@ -42,6 +42,7 @@ if(isset($_POST['btnAccion'])){
                 $mensaje.="Cantidad Correcto ".$CANTIDAD."<br>";
             }
             else{
+                $CANTIDAD=1;
                 $mensaje.="¡ALERTA! Cantidad incorrecta "."<br>";
             }
 
@@ -66,6 +67,7 @@ if(isset($_POST['btnAccion'])){
                     $mensaje="";
                 }else{
                     $nProductos=count($_SESSION['CARRITO']); //Cuenta el num de productos en el carrito
+
                     $producto=array(
                         'ID'=>$ID,
                         'NOMBRE'=>$NOMBRE,
@@ -107,5 +109,7 @@ if(isset($_POST['btnAccion'])){
     }
 }
 
+//Auxiliar para saber si está iniciada sesión
+$_SESSION['DENTRO']=1;
 
 ?>

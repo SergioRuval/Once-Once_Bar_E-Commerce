@@ -94,16 +94,38 @@
                 <td align="right"><h3>$<?php echo number_format($total,2);?></h3></td>
                 <td></td>
             </tr>
+            <tr>
+                <td colspan="5">
+                    <form action="<?php //para saber si le deja continuar el pago o lo manda a iniciar sesión
+                        if($_SESSION['DENTRO']==1)
+                            echo "pagar.php";
+                        else
+                            echo "login.html";
+                    ?>" method="post">
+                        <!--<div class="alert alert-success">
+                            <div class="form-group">
+                                <label for="correo">Correo de contacto:</label>
+                                <input type="email" id="correo" name="correo" class="form-control" placeholder="Ingresa tu correo" required>
+                            </div>
+                            <small id="emailHelp" class="form-text text-muted">
+                                Los productos se van a enviar.
+                            </small>
+                        </div>-->
+                        <button class="btn btn-dark btn-lg btn-block" id="aPagar" type="submit"  name="btnAccion" value="proceder" style="width: 100%;">Proceder a pagar >></button>
+                    </form>
+                </td>
+            </tr>
         </tbody>
     </table>
 
     <?php } else{ ?>
-        <div class="alert alert-warning">
-            No hay productos en el carrito.
+        <div class="alert alert-warning text-center">
+            Carrito vacío.
         </div>
     <?php } ?>
 
     </div>
+
 </body>
 </html>
 

@@ -84,7 +84,7 @@
                                 <input type="hidden" name="precio" id="precio" value="<?php echo openssl_encrypt($bebida['Precio'],COD,KEY); ?>">
                                 <!--<input type="hidden" name="cantidad" id="cantidad" value="<?php echo openssl_encrypt(1,COD,KEY); ?>">-->
                                 <label for="cantidad">Cantidad</label>
-                                <input type="number" name="cantidad" id="cantidad" min="1" max="<?php echo $bebida['Existencia'];?>"> <br><br>
+                                <input type="number" name="cantidad" id="cantidad" min="1" max="<?php echo $bebida['Existencia'];?>" value="1"> <br><br>
 
                                 <button class="btn btn-primary" 
                                 name="btnAccion" 
