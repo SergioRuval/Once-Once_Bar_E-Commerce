@@ -5,6 +5,7 @@
     <title>ONCE:ONCE</title>
     
     <link rel="stylesheet" href="css/ayuda.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     

@@ -5,26 +5,24 @@
     <title>ONCE:ONCE</title>
     
     <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
     
     <div class="part1">
-        <div class="part1-1">
-            <?php
-                require("./php/navbarCliente.php");
-            ?>
-        </div>
+        <?php
+            require("./php/navbarCliente.php");
+        ?>
     </div>
     
     <div class="maindiv">

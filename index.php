@@ -7,6 +7,7 @@
     
     <!-- Links -->
     <link rel="stylesheet" href="css/indexcss.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -19,18 +20,26 @@
 </head>
 <body>
 <div class="part1">
-    <div class="part1-1">
-        <?php
-            require("./php/navbarCliente.php");
-        ?>
-    </div>
+    <?php
+        require("./php/navbarCliente.php");
+    ?>
 </div>
-    
+
+<?php
+    if(empty($_SESSION["CUENTA"])){
+?>
     <div class="login">
-        <a href="./login.html" class="loginbutton blink_me">Iniciar sesión</a>
-        <a href="./signup.html" class="loginbutton blink_me">Regístrate</a>
+        <a href="/login.php" class="loginbutton blink_me">Iniciar sesión</a>
+        <a href="/login.php" class="loginbutton blink_me">Regístrate</a>
         <a href=""></a>
     </div>
+<?php
+    }else{ ?>
+        <div class="login">
+            <a href="/login.php" class="loginbutton blink_me">Cerrar sesión</a>
+        </div>
+   <?php }
+?>
     
     <div class="socialicons">
         <a href="https://www.facebook.com/onceoncesportbar" class="icons blink_me" target="_blank"><i class="fab fa-facebook"></i></a>
