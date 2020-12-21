@@ -43,7 +43,7 @@ body{
 .div1{
     top: 150px;
     position: absolute;
-    background-color: aquamarine;
+    background-color: white;
     height: 600px;
     width: 1000px;
     border-radius: 20px;
@@ -54,7 +54,7 @@ body{
     top: 170px;
     left: 20px;
     position: absolute;
-    background-color: #FFFFB1;
+    background-color: red;
     height: 600px;
     width: 1000px;
     border-radius: 20px;
@@ -66,7 +66,7 @@ body{
     position: absolute;
     left: 40px;
     top: 190px;
-    background-color: #ffd7bc;
+    background-color: white;
     height: 600px;
     width: 1000px;
     border-radius: 20px;
@@ -78,7 +78,7 @@ body{
     position: absolute;
     left: 900px;
     top: 400px;
-    background-color: #ffdcf4;
+    background-color: red;
     height: 600px;
     width: 580px;
     border-radius: 20px;
@@ -90,7 +90,7 @@ body{
     position: absolute;
     left: 920px;
     top: 380px;
-    background-color: #dcfffb;
+    background-color: white;
     height: 600px;
     width: 580px;
     border-radius: 20px;
@@ -102,7 +102,7 @@ body{
     position: absolute;
     left: 940px;
     top: 360px;
-    background-color: #ccffcc;
+    background-color: red;
     height: 600px;
     width: 580px;
     border-radius: 20px;
@@ -114,7 +114,7 @@ body{
     position: absolute;
     left: 960px;
     top: 340px;
-    background-color: #ccaaff;
+    background-color: white;
     height: 600px;
     width: 580px;
     border-radius: 20px;
@@ -126,7 +126,7 @@ body{
     position: absolute;
     left: 100px;
     top: 750px;
-    background-color: #d4f0f0;
+    background-color: white;
     height: 600px;
     width: 850px;
     border-radius: 20px;
@@ -138,7 +138,7 @@ body{
     position: absolute;
     left: 120px;
     top: 770px;
-    background-color: #ffffb5;
+    background-color: red;
     height: 600px;
     width: 850px;
     border-radius: 20px;
@@ -150,7 +150,7 @@ body{
     position: absolute;
     left: 140px;
     top: 790px;
-    background-color: #ff968a;
+    background-color: white;
     height: 600px;
     width: 850px;
     border-radius: 20px;
