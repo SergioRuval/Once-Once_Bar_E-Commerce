@@ -116,7 +116,7 @@
                 <div class="form-group button1">
                     <button type="submit" class="btn btn-primary btn-block" id="submit">Enviar</button>
                     <br>
-                    <a href="index.html">Regresar</a>
+                    <a href="index.php">Regresar</a>
                 </div>
             </div>
         </form>
