@@ -4,6 +4,8 @@ const inputCuenta = document.getElementById("inpCuenta");
 const inputPass = document.getElementById("inpPass");
 const inputConfPass = document.getElementById("inpConfPass");
 
+const botonSubmit = document.getElementById("submit");
+
 inputNombre.addEventListener('input', function (event){
     let regExp = /[\W\d]/;
 
@@ -11,13 +13,16 @@ inputNombre.addEventListener('input', function (event){
         inputNombre.style.color = "red";
         document.getElementsByClassName("msg-error")[0].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[0].innerText = "El nombre debe tener más de 3 caracteres";
+        inputNombre.setCustomValidity("Tamaño inválido para nombre");
     }else if(regExp.test(inputNombre.value)){
         inputNombre.style.color = "red";
         document.getElementsByClassName("msg-error")[0].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[0].innerText = "No se permiten caracteres especiales ni números";
+        inputNombre.setCustomValidity("Caracteres no validos en nombre");
     }else{
         inputNombre.style.color = "black";
         document.getElementsByClassName("msg-error")[0].style.display = "none";
+        inputNombre.setCustomValidity("");
     }
 });
 
@@ -28,9 +33,11 @@ inputEmail.addEventListener('input', function (event){
         inputEmail.style.color = "red";
         document.getElementsByClassName("msg-error")[1].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[1].innerText = "Correo electrónico no válido";
+        inputEmail.setCustomValidity("Formato no correspondiente a email");
     }else{
         inputEmail.style.color = "black";
         document.getElementsByClassName("msg-error")[1].style.display = "none";
+        inputEmail.setCustomValidity("");
     }
 });
 
@@ -42,17 +49,21 @@ inputCuenta.addEventListener('input', function (event){
         inputCuenta.style.color = "red";
         document.getElementsByClassName("msg-error")[2].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[2].innerText = "Espacios no permitidos en nombre de cuenta";
+        inputCuenta.setCustomValidity("No se pueden incluir espacios en blanco");
     }else if(inputCuenta.value.length < 6 || inputCuenta.value.length > 20){
         inputCuenta.style.color = "red";
         document.getElementsByClassName("msg-error")[2].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[2].innerText = "Mínimo 6 y máximo 20 caracteres";
+        inputCuenta.setCustomValidity("Tamaño de cuenta no valido");
     }else if(!regExp.test(inputCuenta.value)){
         inputCuenta.style.color = "red";
         document.getElementsByClassName("msg-error")[2].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[2].innerText = "Caracteres no válidos en el nombre de cuenta";
+        inputCuenta.setCustomValidity("Caracteres no validos en la cuenta");
     }else{
         inputCuenta.style.color = "black";
         document.getElementsByClassName("msg-error")[2].style.display = "none";
+        inputCuenta.setCustomValidity("");
     }
 });
 
@@ -63,14 +74,16 @@ inputPass.addEventListener('input', function (event){
         inputPass.style.color = "red";
         document.getElementsByClassName("msg-error")[3].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[3].innerText = "Mínimo 6 y máximo 16 caracteres";
-        inputPass.validity.valid = false;
+        inputPass.setCustomValidity('Contraseña corta');
     }else if(!regExp.test(inputPass.value)){
-        inputCuenta.style.color = "red";
+        inputPass.style.color = "red";
         document.getElementsByClassName("msg-error")[3].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[3].innerText = "Debe haber al menos: un dígito, una minúscula y una mayúscula.";
+        inputPass.setCustomValidity('Caracteres no permitidos');
     }else{
         inputPass.style.color = "black";
         document.getElementsByClassName("msg-error")[3].style.display = "none";
+        inputPass.setCustomValidity('');
     }
 });
 
@@ -79,8 +92,10 @@ inputConfPass.addEventListener('input', function (event){
         inputConfPass.style.color = "red";
         document.getElementsByClassName("msg-error")[4].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[4].innerText = "Las contraseñas no coinciden";
+        inputConfPass.setCustomValidity("Contraseña no es igual a la original");
     }else{
         inputConfPass.style.color = "black";
         document.getElementsByClassName("msg-error")[4].style.display = "none";
+        inputConfPass.setCustomValidity("");
     }
 });
