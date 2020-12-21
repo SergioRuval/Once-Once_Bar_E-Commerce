@@ -36,7 +36,7 @@
 <?php
     }else{ ?>
         <div class="login">
-            <a href="login.php" class="loginbutton blink_me">Cerrar sesión</a>
+            <a href="php/logout.php" class="loginbutton blink_me">Cerrar sesión</a>
         </div>
    <?php }
 ?>

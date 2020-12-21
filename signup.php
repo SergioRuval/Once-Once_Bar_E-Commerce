@@ -123,7 +123,7 @@
     </div>
 
     <!-- Scripts de JavaScript para validar los formularios -->
-    <script src="./js/validaSignup.js"></script>
+    <script src="js/validaSignup.js"></script>
 
 </body>
 

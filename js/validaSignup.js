@@ -9,9 +9,6 @@ const botonSubmit = document.getElementById("submit");
 inputNombre.addEventListener('input', function (event){
     let regExp = /^[a-zA-ZÁ-ÿ\s]{3,50}$/;
 
-    console.log(regExp.test(inputNombre.value));
-    console.log(inputNombre.value);
-
     if(inputNombre.value.length <= 3){
         inputNombre.style.color = "red";
         document.getElementsByClassName("msg-error")[0].style.display = "contents";
