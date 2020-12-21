@@ -69,7 +69,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
     </form>
 </div>
 <div>
-    <a href="index.html">Regresar</a>
+    <a href="javascript:history.go(-1)">Regresar</a>
 </div>
 
 <!-- Script de validación para login -->
