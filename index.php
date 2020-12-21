@@ -1,3 +1,8 @@
+<?php
+    include 'global/config.php';
+    include 'carrito.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -20,11 +25,12 @@
     
     <div class="part1" id="BackHome">
         <div class="part1-1">
-            <p><a href="index.html" class="buttonp1 blink_me"><strong><i class="fas fa-home fa-lg"></i></strong></a></p>
-            <p><a href="aboutus.html" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
-            <p><a href="formulario.html" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
-            <p><a href="ayuda.html" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
-            <p><a href="tienda.php" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
+            <p><a href="index.php" class="buttonp1 blink_me"><strong><i class="fas fa-home fa-lg"></i></strong></a></p>
+            <p><a href="aboutus.php" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
+            <p><a href="formulario.php" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
+            <p><a href="ayuda.php" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
+            <p><a href="tiendaIsacc.php" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
+            <p><a href="showCarrito.php" class="buttonp1 blink_me"><strong><i class="fas fa-shopping-basket"></i> (<?php echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);?>)</strong></a></p>
         </div>
     </div>
     

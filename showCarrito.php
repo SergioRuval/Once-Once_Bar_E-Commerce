@@ -35,16 +35,74 @@
 
 </head>
 <body>
+
+    <div class="part1" id="BackHome">
+        <div class="part1-1">
+            <p><a href="index.php" class="buttonp1 blink_me"><strong><i class="fas fa-home fa-lg"></i></strong></a></p>
+            <p><a href="aboutus.php" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
+            <p><a href="formulario.php" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
+            <p><a href="ayuda.php" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
+            <p><a href="tiendaIsacc.php" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
+            <p><a href="showCarrito.php" class="buttonp1 blink_me"><strong><i class="fas fa-shopping-basket"></i> (<?php echo (empty($_SESSION['CARRITO']))?0:count($_SESSION['CARRITO']);?>)</strong></a></p>
+        </div>
+    </div>
+
+    <br>
+
+    <div class="container">
     <h3>Lista de compras</h3>
 
-    <table class="table table-light">
+    <?php if(!empty($_SESSION['CARRITO'])){ ?>
+
+    <table class="table table-light table-bordered">
         <tbody>
             <tr>
+                <th width="40%">Producto</th>
+                <th width="20%" class="text-center">Cantidad</th>
+                <th width="20%" class="text-center">Precio</th>
+                <th width="15%" class="text-center">Total</th>
+                <th width="5%" >--</th>
+            </tr>
+            <?php $total=0;?>
+            <?php foreach($_SESSION['CARRITO'] as $i=>$producto){?>
+            <tr>
+                <td width="40%"><?php echo $producto['NOMBRE'];?></td>
+                <td width="15%" class="text-center"><?php echo $producto['CANTIDAD'];?></td>
+                <td width="20%" class="text-center">$<?php echo $producto['PRECIO'];?></td>
+                <td width="20%" class="text-center">$<?php echo number_format($producto['PRECIO']*$producto['CANTIDAD'],2);?></td>
+                <td width="5%">
+
+                <!-- ELIMINAR PRODUCTO -->
+                    <form action="" method="post">
+
+                        <input type="hidden" name="id" value="<?php echo openssl_encrypt($producto['ID'],COD,KEY); ?>">
+
+                        <button 
+                        class="btn btn-warning" type="submit"
+                        name="btnAccion"
+                        value="Eliminar"
+                        >Eliminar</button>
+                    </form>
+                    
+                </td>
+            </tr>
+            <?php $total+=$producto['PRECIO']*$producto['CANTIDAD'];?>
+            <?php }?>
+            <tr>
+                <td colspan="3" align="right"><h3>TOTAL</h3></td>
+                <td align="right"><h3>$<?php echo number_format($total,2);?></h3></td>
                 <td></td>
             </tr>
         </tbody>
     </table>
 
+    <?php } else{ ?>
+        <div class="alert alert-warning">
+            No hay productos en el carrito.
+        </div>
+    <?php } ?>
+
+    </div>
 </body>
 </html>
 

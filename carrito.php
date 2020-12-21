@@ -7,6 +7,7 @@ $mensaje="";
 if(isset($_POST['btnAccion'])){
 
     switch($_POST['btnAccion']){
+        //Cuando añadimos un nuevo producto
         case 'Agregar':
             //Valida que no se haya incluido un valor externo al ID encriptado
             if(is_numeric(openssl_decrypt($_POST['id'],COD,KEY))){
@@ -52,19 +53,49 @@ if(isset($_POST['btnAccion'])){
                     'PRECIO'=>$PRECIO
                 );
                 $_SESSION['CARRITO'][0]=$producto;
+                $mensaje= "¡Producto agregado con ÉXITO!";
             }else{//Ya se tenían productos agregados
-                $nProductos=count($_SESSION['CARRITO']); //Cuenta el num de productos en el carrito
-                $producto=array(
-                    'ID'=>$ID,
-                    'NOMBRE'=>$NOMBRE,
-                    'CANTIDAD'=>$CANTIDAD,
-                    'PRECIO'=>$PRECIO
-                );
-                $_SESSION['CARRITO'][$nProductos]=$producto;
+
+                //Se va a validar que el producto seleccionado no esté dentro del carrito
+                $idProductos=array_column($_SESSION['CARRITO'],"ID"); //Guarda todos los ID de todos los productos en el carrito
+
+                if(in_array($ID,$idProductos)){
+                    echo "<script>alert('Producto ya se ha seleccionado');</script>";
+                    $mensaje="";
+                }else{
+                    $nProductos=count($_SESSION['CARRITO']); //Cuenta el num de productos en el carrito
+                    $producto=array(
+                        'ID'=>$ID,
+                        'NOMBRE'=>$NOMBRE,
+                        'CANTIDAD'=>$CANTIDAD,
+                        'PRECIO'=>$PRECIO
+                    );
+                    $_SESSION['CARRITO'][$nProductos]=$producto;
+                    $mensaje= "¡Producto agregado con ÉXITO!";
+                }
+
+                
             }
 
-            $mensaje= print_r($_SESSION,true);
+            //$mensaje= print_r($_SESSION,true);
 
+            break;
+
+            //Cuando eliminamos un producto del carrito
+            case 'Eliminar':
+                if(is_numeric(openssl_decrypt($_POST['id'],COD,KEY))){
+                    $ID=openssl_decrypt($_POST['id'],COD,KEY);
+                    //Vamos a buscar el producto que se va a eliminar en array de SESSION
+                    foreach($_SESSION['CARRITO'] as $i=>$producto){
+                        if($producto['ID']==$ID){
+                            unset($_SESSION['CARRITO'][$i]);
+                            echo "<script>alert('Producto eliminado...');</script>";
+
+                        }
+                    }
+                }else{
+                    $mensaje.="¡ALERTA! ID Inorrecto "."<br>";
+                }
             break;
     }
 }
