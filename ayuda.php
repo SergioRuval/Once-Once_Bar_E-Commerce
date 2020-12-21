@@ -20,7 +20,7 @@
 </head>
 <body>
     
-    <div class="part1">
+    <div class="navbar">
           <?php
             require("./php/navbarCliente.php");
           ?>

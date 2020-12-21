@@ -27,14 +27,6 @@ body{
 
 /*------------------------------------*/
 
-.part1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 120px;
-    width: 100%;
-}
-
 .icons{
     margin: 10px;
     color: white;

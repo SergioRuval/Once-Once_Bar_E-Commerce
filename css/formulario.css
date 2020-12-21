@@ -2,13 +2,8 @@ body{
     background-color: black;
 }
 
-.part1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 120px;
+.navbar{
     background-color: #aff8db;
-    width: 100%;
     border: 1px solid black;
 }
 

@@ -2,17 +2,6 @@ body{
     background-color: black;
 }
 
-
-.part1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 120px;
-    background-color: #c5a3ff;
-    width: 100%;
-    border: 1px solid black;
-}
-
 /* ------------------------------------------------------------------------ */
 
 .maindiv{
