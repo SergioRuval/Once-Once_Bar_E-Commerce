@@ -29,14 +29,14 @@
     if(empty($_SESSION["CUENTA"])){
 ?>
     <div class="login">
-        <a href="/login.php" class="loginbutton blink_me">Iniciar sesión</a>
-        <a href="/login.php" class="loginbutton blink_me">Regístrate</a>
+        <a href="login.php" class="loginbutton blink_me">Iniciar sesión</a>
+        <a href="signup.php" class="loginbutton blink_me">Regístrate</a>
         <a href=""></a>
     </div>
 <?php
     }else{ ?>
         <div class="login">
-            <a href="/login.php" class="loginbutton blink_me">Cerrar sesión</a>
+            <a href="php/logout.php" class="loginbutton blink_me">Cerrar sesión</a>
         </div>
    <?php }
 ?>

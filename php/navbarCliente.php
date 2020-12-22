@@ -6,8 +6,6 @@
 <?php
     session_start();
 
-    $_SESSION["CUENTA"] = "a";
-
     if(empty($_SESSION["CUENTA"])){
 ?>
         <p><a href="login.php" class="noLogeado buttonp1 blink_me "><strong><i class="fa fa-user-circle-o" aria-hidden="true"></i></strong></a></p>
