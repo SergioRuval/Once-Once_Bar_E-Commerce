@@ -8,4 +8,10 @@
     define("USUARIO","root");
     define("PASSWORD","");
     define("BD","tienda");
+
+    //Códigos
+    define("C1","0");
+    define("C2","0");
+    define("C3", "0");
+    
 ?>

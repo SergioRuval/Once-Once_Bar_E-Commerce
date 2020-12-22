@@ -106,6 +106,8 @@ if(isset($_POST['btnAccion'])){
                     $mensaje.="¡ALERTA! ID Inorrecto "."<br>";
                 }
             break;
+            
+
     }
 }
 
