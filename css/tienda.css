@@ -185,3 +185,17 @@ body{
     color: black;
     text-shadow: 0px 0px 2px black;
 }
+
+
+/* E S T I L O    D E    B O T O N */
+  
+  /* Modal Content */
+  .banner {
+    background-color: black;
+    border-radius: 10px;
+    margin: auto;
+    padding: 20px;
+    border: 0px solid black;
+    width: 100%;
+  }
+  

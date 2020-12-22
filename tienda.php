@@ -30,7 +30,13 @@
         <a href="#"><strong>Todos los productos</strong></a>
         <a href="#"><strong>Comida</strong></a>
         <a href="#"><strong>Bebidas</strong></a>
-    </div>
+    </div> <!-- div categoria-->
+        
+         <!-- IMAGEN BANNER -->
+        <div class="banner">
+                <img src="images/banner-cupon2.PNG" alt="" width="100%">
+        </div>
+
 
     <div class="carrito">
         <p><a href="carrito.html" class="blink_me"><strong><i class="fas fa-shopping-basket"></i> (0)</strong></a></p>
