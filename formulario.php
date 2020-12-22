@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 
 </head>
 <body>
@@ -34,18 +35,18 @@
     
     <div id="form2">
         <div id="form3">
-            <form action="action_page.php">
+            <form action="correo.php" method="POST">
                 <div class="container">
                     <h2>¿Quieres contarnos algo?</h2>
                     <p align="center">¡Ingresa tu mensaje y nos pondremos en contacto contigo!</p>
                 </div>
                 <div class="container" style="background-color:white">
                     <label for="namez"> Nombre:</label>
-                    <input type="text" name="name" required id="namez">
+                    <input type="text" name="name" id="namez" required>
                     <label for="mail"> Mail:</label>
-                    <input type="text" name="mail" required>
+                    <input type="text" name="mail" required> 
                     <label for="message">Mensaje:</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="mensaje" id="" cols="30" rows="10" required></textarea>
                     <label>
                         <input type="checkbox" checked="checked" name="subscribe"> Sucribirse a nuestro newsletter
                     </label>
