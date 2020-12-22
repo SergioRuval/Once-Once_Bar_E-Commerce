@@ -1,0 +1,29 @@
+body{
+    background-color: black;
+}
+
+.exit{
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+.exit a{
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    transition: 1.5s;
+}
+
+.exit a:hover{
+    transition: 1.5s;
+    color: red;
+}
+
+.text{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 100px;
+    text-align: center;
+}
