@@ -1,8 +1,8 @@
 <?php
-    $servidor = 'db5001359255.hosting-data.io';
-    $cuenta = 'dbu1107284';
+    $servidor = 'sql206.byethost13.com';
+    $cuenta = 'b13_27521143';
     $password = '5p1d3rm4n_G';
-    $bd = 'dbs1152604';
+    $bd = 'b13_27521143_tienda';
 
     $conexion = new mysqli($servidor,$cuenta,$password,$bd);
 
