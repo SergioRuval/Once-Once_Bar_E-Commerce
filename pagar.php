@@ -125,13 +125,13 @@
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="formaPago" id="gridRadios2" value="BBVA Bancomer">
                             <label class="form-check-label" for="gridRadios2">
-                                Tarjeta Bancaria
+                                Tarjeta BBVA Bancomer
                             </label>
                         </div>
                         <div class="form-check">
                             <input class="form-check-input" type="radio" name="formaPago" id="gridRadios3" value="Santander">
                             <label class="form-check-label" for="gridRadios3">
-                                PayPal
+                                Tarjeta Banco Santander
                             </label>
                         </div>
                     </div>

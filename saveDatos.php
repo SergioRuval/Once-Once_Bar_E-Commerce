@@ -34,6 +34,51 @@
     $sentencia->bindParam(":NumTel",$numTel);
     $sentencia->bindParam(":FormaPago",$formaPago);
     $sentencia->bindParam(":Total",$total);
-    $sentencia->execute();
+    //$sentencia->execute();
+
+    //Se obtiene para establecer los detalles de la venta realizada por el pago
+    $idVenta=$pdo->lastInsertId();
+
     echo "llegue";
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fin</title>
+
+    <!--CSS-->
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/saveDatos.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body>
+    
+    <?php 
+    
+    //require('navbarCliente.php');
+    
+        switch($formaPago){
+            case 'OXXO':
+                include 'oxxo.php';
+            break;
+
+            case 'BBVA Bancomer':
+                include 'bbva.php';
+            break;
+
+            case 'Santander':
+                include 'santander.php';
+            break;
+        }
+    
+    ?>
+
+<!-- Iría el pie -->
+
+</body>
+</html>
+
