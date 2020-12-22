@@ -10,14 +10,18 @@
 
       if(empty($_SESSION["CUENTA"])){
   ?>
-        <a href="login.php" class="noLogeado blink_me buttonp1"><strong><i class="fa fa-user-circle-o" aria-hidden="true"></i></strong></a>
+        <a href="login.php" class="noLogeado blink_me buttonp1"><strong><i class="fa fa-user-circle-o fa-lg" aria-hidden="true"></i></strong></a>
   <?php
       }else{?>
         <span class="dropbtn logeado"><strong><i class="fa fa-user-circle-o fa-lg" onclick="myFunction()" id="usuario"></i></strong></span>
         <div id="myDropdown" class="dropdown-content">
-            <a href="#home">Nombre</a>
+            <a href="#home">
+              <?php
+                echo $_SESSION["CUENTA"];
+              ?>
+            </a>
             <a href="#about">Carrito</a>
-            <a href="#contact">Salir</a>
+            <a href="php/logout.php">Salir</a>
         </div>
   <?php } ?>
 </div>
