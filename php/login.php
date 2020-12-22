@@ -38,9 +38,6 @@
                     setcookie("recordUsuario", $cuenta, time() + 7200);
                     setcookie("recordContra", $password, time() + 7200);
                 }else{
-                    ?>
-                    <script>alert("No entra a esta madre")</script>
-                    <?php
                     setcookie("recordar", "");
                     setcookie("recordUsuario", "");
                     setcookie("recordContra", "");
