@@ -7,6 +7,7 @@
     
     <!-- Links -->
     <link rel="stylesheet" href="css/indexcss.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
@@ -19,22 +20,27 @@
     
 </head>
 <body>
-    
-    <div class="part1" id="BackHome">
-        <div class="part1-1">
-            <p><a href="index.html" class="buttonp1 blink_me"><strong><i class="fas fa-home fa-lg"></i></strong></a></p>
-            <p><a href="aboutus.html" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
-            <p><a href="formulario.html" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
-            <p><a href="ayuda.html" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
-            <p><a href="tienda.php" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
-        </div>
-    </div>
-    
+<div class="navbar">
+    <?php
+        require("./php/navbarCliente.php");
+    ?>
+</div>
+
+<?php
+    if(empty($_SESSION["CUENTA"])){
+?>
     <div class="login">
-        <a href="./login.html" class="loginbutton blink_me">Iniciar sesión</a>
-        <a href="./signup.html" class="loginbutton blink_me">Regístrate</a>
+        <a href="login.php" class="loginbutton blink_me">Iniciar sesión</a>
+        <a href="signup.php" class="loginbutton blink_me">Regístrate</a>
         <a href=""></a>
     </div>
+<?php
+    }else{ ?>
+        <div class="login">
+            <a href="php/logout.php" class="loginbutton blink_me">Cerrar sesión</a>
+        </div>
+   <?php }
+?>
     
     <div class="socialicons">
         <a href="https://www.facebook.com/onceoncesportbar" class="icons blink_me" target="_blank"><i class="fab fa-facebook"></i></a>

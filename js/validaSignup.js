@@ -7,14 +7,14 @@ const inputConfPass = document.getElementById("inpConfPass");
 const botonSubmit = document.getElementById("submit");
 
 inputNombre.addEventListener('input', function (event){
-    let regExp = /[\W\d]/;
+    let regExp = /^[a-zA-ZÁ-ÿ\s]{3,50}$/;
 
     if(inputNombre.value.length <= 3){
         inputNombre.style.color = "red";
         document.getElementsByClassName("msg-error")[0].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[0].innerText = "El nombre debe tener más de 3 caracteres";
         inputNombre.setCustomValidity("Tamaño inválido para nombre");
-    }else if(regExp.test(inputNombre.value)){
+    }else if(!regExp.test(inputNombre.value)){
         inputNombre.style.color = "red";
         document.getElementsByClassName("msg-error")[0].style.display = "contents";
         document.getElementsByClassName("msg-error-p")[0].innerText = "No se permiten caracteres especiales ni números";

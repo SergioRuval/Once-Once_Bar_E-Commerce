@@ -5,6 +5,7 @@
     <title>ONCE:ONCE</title>
     
     <link rel="stylesheet" href="css/ayuda.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -19,12 +20,10 @@
 </head>
 <body>
     
-    <div class="part1">
-            <p><a href="index.html" class="buttonp1 blink_me"><strong><i class="fas fa-home fa-lg"></i></strong></a></p>
-            <p><a href="aboutus.html" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
-            <p><a href="formulario.html" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
-            <p><a href="ayuda.html" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
-            <p><a href="tienda.html" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
+    <div class="navbar">
+          <?php
+            require("./php/navbarCliente.php");
+          ?>
     </div>
     
     <div class="faq1">

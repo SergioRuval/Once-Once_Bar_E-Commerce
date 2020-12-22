@@ -2,38 +2,14 @@ body{
     background-color: black;
 }
 
-.part1{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    height: 120px;
+.navbar{
     background-color: #aff8db;
-    width: 100%;
     border: 1px solid black;
-}
-
-.buttonp1{
-    text-decoration: none;
-    color: black;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 0px 0px 3px black;
-}
-
-.blink_me:hover{
-    animation: blinker 1.3s linear infinite;
-    cursor: pointer;
 }
 
 .blink_me1:hover{
     animation: blinker 1.7s linear infinite;
     cursor: pointer;
-}
-
-@keyframes blinker{
-    50%{
-        opacity: 0;
-    }
 }
 
 /* ---------------------------------------------- */

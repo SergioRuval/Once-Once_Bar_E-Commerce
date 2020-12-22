@@ -27,35 +27,6 @@ body{
 
 /*------------------------------------*/
 
-@keyframes blinker{
-    50%{
-        opacity: 0;
-    }
-}
-
-
-.part1{
-    width: 100%;
-    position: relative;
-}
-
-.part1-1{
-    display: flex;
-    justify-content: space-around;
-}
-
-.buttonp1{
-    text-decoration: none;
-    color: white;
-    font-size: 30px;
-    font-family: 'Montserrat', sans-serif;
-    text-shadow: 0px 0px 3px white;
-}
-
-.blink_me:hover{
-    animation: blinker 1.3s linear infinite;
-}
-
 .icons{
     margin: 10px;
     color: white;

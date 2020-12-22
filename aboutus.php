@@ -5,11 +5,11 @@
     <title>ONCE:ONCE</title>
     
     <link rel="stylesheet" href="css/aboutus.css">
+    <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
@@ -17,59 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
     <style>
-    .dropbtn {
-        background-color: black;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-        outline: none;
-    }
-
-    .dropbtn:hover, .dropbtn:focus {
-        text-shadow: 0 0 3px white;
-    }
-
-    .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        overflow: auto;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown a:hover {background-color: #ddd;}
-
-    .show {display: block;}
-
+    
 </style>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
 </head>
 <body>
     
-    <div class="part1">
-        <div class="part1-1">
-            <p><a href="index.html" class="buttonp1 blink_me"><strong><i class="fas fa-home fa-lg"></i></strong></a></p>
-            <p><a href="aboutus.html" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
-            <p><a href="formulario.html" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
-            <p><a href="ayuda.html" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
-            <p><a href="#" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
-            <div class="dropdown">
-                <span class="dropbtn"><strong><i class="fa fa-user-circle-o fa-lg" onclick="myFunction()" id="usuario"></i></strong></span>
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#home">Home</a>
-                  <a href="#about">About</a>
-                  <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </div>
+    <div class="navbar">
+        <?php
+            require("./php/navbarCliente.php");
+        ?>
     </div>
 
     <script>
