@@ -34,6 +34,11 @@
     height: 100px;
 }
 
+#logSan{
+    width: 400px;
+    height: 90px;
+}
+
 #datosCard{
     display: flex;
     flex-direction: column;
@@ -92,6 +97,21 @@
 
 #terminar{
     font-size: 25px;
+}
+
+#partCard:hover{
+    border: 2px solid orange;
+    border-radius: 1px;
+}
+
+#fecha:hover{
+    border: 2px solid orange;
+    border-radius: 1px;
+}
+
+#seCode:hover{
+    border: 2px solid orange;
+    border-radius: 1px;
 }
 
 /* ----- GENERAL ----*/

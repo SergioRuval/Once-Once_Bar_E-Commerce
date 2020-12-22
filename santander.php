@@ -7,7 +7,7 @@
             <h4 id="nom">PAGO</h4>
         </div>
         <div class="imagenLogo">
-            <img src="images/santanderLogo.png" alt="Logo BBVA" id="logBBVA">
+            <img src="images/santanderLogo.png" alt="Logo Santander" id="logSan">
         </div>
     </div>
     <div class="indicacion">
@@ -17,7 +17,7 @@
         </h4>
     </div>
     <div class="datosCard">
-        <form action="" method="POST" id="datosCard">
+        <form action="finalCard.php" method="POST" id="datosCard">
             <div class="soloDatos">
                 <div class="numCard">
                     <div>
@@ -41,6 +41,7 @@
             </div>
             <div class="btnSend">
                 <button class="btn btn-outline-danger" type="submit" id="terminar">Terminar</button>
+                <input type="hidden" name="formaPago" value="<?php echo $formaPago;?>">
             </div>
         </form>
     </div>
