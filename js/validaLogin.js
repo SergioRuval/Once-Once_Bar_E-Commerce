@@ -76,12 +76,13 @@ inputPass.addEventListener('blur', function(event){
             }
         }
     }
+
+    console.log(inputPass.value);
 });
 
 
 
 btnSumbit.addEventListener('click', function (event){
-    console.log("Entra aqui");
     if(!cuentaCorrecta && !passCorrecta){
         event.preventDefault();
         if(!cuentaCorrecta){
@@ -103,6 +104,9 @@ btnSumbit.addEventListener('click', function (event){
             inputPass.style.color = "black";
             document.getElementsByClassName("msg-error")[1].style.display = "none";
             inputPass.setCustomValidity('');
+        }
+        if(document.getElementById("check")){
+            
         }
     }
 });

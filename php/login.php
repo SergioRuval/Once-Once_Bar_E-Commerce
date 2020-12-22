@@ -14,6 +14,7 @@
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $cuenta = $_POST["cuenta"];
             $password = $_POST["password"];
+            $recordar = $_POST["recordar"];
 
             // Cifrado de la contraseña para guardarla
             $passCifrada = sha1($password);
@@ -31,6 +32,19 @@
                 $_SESSION["CUENTA"] = $cuenta;
                 $_SESSION["CARRITO"] = [];
                 $_SESSION["EMAIL"] = $email;
+
+                if(!empty($_POST["cookie"])){
+                    setcookie("recordar", "hola", time() + 7200);
+                    setcookie("recordUsuario", $cuenta, time() + 7200);
+                    setcookie("recordContra", $password, time() + 7200);
+                }else{
+                    ?>
+                    <script>alert("No entra a esta madre")</script>
+                    <?php
+                    setcookie("recordar", "");
+                    setcookie("recordUsuario", "");
+                    setcookie("recordContra", "");
+                }
 
                 header("Location: ../index.php");
             }else{

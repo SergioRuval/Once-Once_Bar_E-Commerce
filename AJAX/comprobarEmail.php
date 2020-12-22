@@ -1,7 +1,11 @@
 <?php
     $servidor = 'localhost';
     $cuenta = 'root';
+<<<<<<< HEAD
     $password = ''; 
+=======
+    $password = '';
+>>>>>>> BranchSergio
     $bd = 'tienda';
 
     $conexion = new mysqli($servidor,$cuenta,$password,$bd);

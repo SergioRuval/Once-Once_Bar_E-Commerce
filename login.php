@@ -60,16 +60,19 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
 <div class="div1">
     <form action="php/login.php" method="post" style=" text-align:center; width: 450px;" autocomplete="off">
 		<p>
-			Usuario: <input name="cuenta" id="inpCuenta" class="form-control form-control-sm" type="text" required>
+			Usuario: <input name="cuenta" id="inpCuenta" class="form-control form-control-sm" type="text" required value="<?php if(isset($_COOKIE["recordarContra"])){ echo $_COOKIE["recordUsuario"]; } ?>">
         </p>
         <p class="msg-error ">
             <small class="msg-error-p mb-5">Este es un error jajajaja</small>
         </p>
 		<p class="mt-2">
-			Contraseña: <input name="password" id="inpPass" class="form-control form-control-sm" type="password" required>
+			Contraseña: <input name="password" id="inpPass" class="form-control form-control-sm" type="password" required value="<?php if(isset($_COOKIE["recordarContra"])){ echo $_COOKIE["recordContra"]; } ?>">
         </p>
         <p class="msg-error">
             <small class="msg-error-p">Este es un error jajajaja</small><br>
+        </p>
+        <p class="mt-2">
+            <input type="checkbox" id="check" name="cookie" class="form-control form-control-sm mb-3"> <small>Recordar contraseña</small>
         </p>
 		<div class="form-group mt-2">
 		  <button type="submit" class="btn btn-primary btn-block" id="submit">Iniciar Sesión</button>
