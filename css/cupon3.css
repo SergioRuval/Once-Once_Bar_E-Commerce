@@ -2,7 +2,7 @@
     position: relative;
     display:inherit;
 }
-.texto1{
+div.texto1{
     position: absolute;
     top: 10%;
     left: 10%;
@@ -11,7 +11,7 @@
     letter-spacing: 5px;
     font-family: 'Bowlby One', cursive;
 }
-.texto2{
+div.texto2{
     position: absolute;
     top: 18%;
     left: 10%;
@@ -20,7 +20,7 @@
     letter-spacing: 3px;
     font-family: 'Bowlby One', cursive;
 }
-.texto3{
+div.texto3{
     position: absolute;
     top: 26%;
     left: 10%;

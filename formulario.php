@@ -34,7 +34,7 @@
     
     <div id="form2">
         <div id="form3">
-            <form action="action_page.php">
+            <form action="correo.php">
                 <div class="container">
                     <h2>¿Quieres contarnos algo?</h2>
                     <p align="center">¡Ingresa tu mensaje y nos pondremos en contacto contigo!</p>
