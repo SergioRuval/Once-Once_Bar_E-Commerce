@@ -1,0 +1,61 @@
+.caja{
+    position: relative;
+    display:inherit;
+}
+.texto1{
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Bowlby One', cursive;
+}
+.texto2{
+    position: absolute;
+    top: 18%;
+    left: 10%;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 3px;
+    font-family: 'Bowlby One', cursive;
+}
+.texto3{
+    position: absolute;
+    top: 26%;
+    left: 10%;
+    font-size: 50px;
+    color: white;
+    letter-spacing: 5px;
+    font-family: 'Bowlby One', cursive;
+}
+.texto4{
+    position: absolute;
+    top: 30%;
+    left: 20%;
+    font-size: 180px;
+    color: #FFB900;
+    font-family: 'Bowlby One', cursive;
+}
+.texto5{
+    position: absolute;
+    top: 90%;
+    left: 35%;
+    font-size: 23px;
+    color: #FFB900;
+    font-family: 'Bowlby One', cursive;
+    text-shadow: -1px -1px 0px grey,
+    0px 1px 0px black,
+    1px 1px 1px black;
+}
+.texto6{
+    position: absolute;
+    top: 84%;
+    left: 57%;
+    font-size: 70px;
+    color: #FFB900;
+    font-family: 'Bowlby One', cursive;
+    text-shadow: -1px -1px 0px grey,
+    1px 1px 0px black,
+    3px 3px 3px black;
+}
