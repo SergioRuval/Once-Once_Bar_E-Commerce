@@ -50,7 +50,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
        Inicia Sesión
    </div>
 <div class="div1">
-    <form action="login.php" method="post" style=" text-align:center; width: 450px;" autocomplete="off">
+    <form action="php/login.php" method="post" style=" text-align:center; width: 450px;" autocomplete="off">
 		<p>
 			Usuario: <input name="cuenta" id="inpCuenta" class="form-control form-control-sm" type="text" required>
         </p>
