@@ -11,6 +11,7 @@
     $asunto = "Pregunta de usuario";
     $cupon = "34567";
         
+
     if($_SERVER["REQUEST_METHOD"] == "POST"){
         
         $nombre = $_POST["name"];
@@ -21,6 +22,8 @@
         $msg = "<p>Nombre del usuario: " . $nombre . "<br>";
         $msg .= "<br>" . $correo . "</p>";
         $msg .= "<br>" . $message . "</p>";
+
+
     }
 
     $mail = new PHPMailer(true);
@@ -47,33 +50,13 @@
         $mail->Subject = $asunto;
         $mail->Body    = $msg;
 
+
+        $mail->AddEmbeddedImage('images/cupon3mil.jpg',"imagen"); //ruta de archivo de imagen
+
+      /*  // La mejor forma de enviar un correo, es creando un HTML e insertandolo de la siguiente forma, PHPMailer permite insertar, imagenes, css, etc. (No se recomienda el uso de Javascript) 
+        $mail->msgHTML(file_get_contents('contenido.html'), dirname(__FILE__)); */
+
         $mail->send();
-
-
-        $msg = "<p> Te regalamos el siguiente cupon: " . $nombre . "<br>";
-        $msg .= "<br>" . $cupon . "</p>";
-
-
-        $mail2->SMTPDebug = SMTP::DEBUG_SERVER;                      // Enable verbose debug output
-        $mail2->isSMTP();                                            // Send using SMTP
-        $mail2->Host       = 'smtp.gmail.com';                      // Set the SMTP server to send through
-        $mail2->SMTPAuth   = true;                                   // Enable SMTP authentication
-        $mail2->Username   = 'octavoconcepto@gmail.com';                     // SMTP username
-        $mail2->Password   = 'Dany15020';                               // SMTP password
-        $mail2->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` encouraged
-        $mail2->Port       = 587;                                    // TCP port to connect to, use 465 for `PHPMailer::ENCRYPTION_SMTPS` above
-
-        //Recipients
-        $mail2->setFrom('octavoconcepto@gmail.com', 'Dani');
-        $mail2->addAddress($correo);
-        $mail2->addReplyTo('octavoconcepto@gmail.com','Dani');
-
-        // Content
-        $mail2->isHTML(true);                                  // Set email format to HTML
-        $mail2->Subject = 'Cupon de descuento';
-        $mail2->Body    = $msg;
-
-        $mail2->send();
 
 
         echo 'El mensaje se envió bien';
