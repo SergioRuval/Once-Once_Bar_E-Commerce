@@ -74,15 +74,6 @@
         </div>
     </div>
 
-    <script>
-        for (i = 0; ...){
-            if (i =){
-            }
-        }
-            
-        
-    </script>
-
     <div class="menu">
         <div class="card">
             <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
