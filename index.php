@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONCE:ONCE</title>
     
     <!-- Links -->
@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
