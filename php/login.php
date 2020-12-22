@@ -1,8 +1,8 @@
 <?php
-    $servidor = 'sql206.byethost13.com';
-    $cuenta = 'b13_27521143';
-    $password = '5p1d3rm4n_G';
-    $bd = 'b13_27521143_tienda';
+    $servidor = 'localhost';
+    $cuenta = 'root';
+    $password = '';
+    $bd = 'tienda';
 
     $conexion = new mysqli($servidor,$cuenta,$password,$bd);
 
@@ -14,6 +14,7 @@
         if($_SERVER["REQUEST_METHOD"] == "POST"){
             $cuenta = $_POST["cuenta"];
             $password = $_POST["password"];
+            $recordar = $_POST["recordar"];
 
             // Cifrado de la contraseña para guardarla
             $passCifrada = sha1($password);
@@ -31,6 +32,19 @@
                 $_SESSION["CUENTA"] = $cuenta;
                 $_SESSION["CARRITO"] = [];
                 $_SESSION["EMAIL"] = $email;
+
+                if(!empty($_POST["cookie"])){
+                    setcookie("recordar", "hola", time() + 7200);
+                    setcookie("recordUsuario", $cuenta, time() + 7200);
+                    setcookie("recordContra", $password, time() + 7200);
+                }else{
+                    ?>
+                    <script>alert("No entra a esta madre")</script>
+                    <?php
+                    setcookie("recordar", "");
+                    setcookie("recordUsuario", "");
+                    setcookie("recordContra", "");
+                }
 
                 header("Location: ../index.php");
             }else{
