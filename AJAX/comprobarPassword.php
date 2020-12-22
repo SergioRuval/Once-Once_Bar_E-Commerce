@@ -12,12 +12,14 @@
         $password;
         $cuenta;
 
-        if(isset($_POST["cuenta"]) && isset($_POST["contra"])){
-            $password = $_POST["contra"];
+        if(isset($_POST["cuenta"]) && isset($_POST["pass"])){
+            $password = $_POST["pass"];
             $cuenta = $_POST["cuenta"];
 
-            $sql = "SELECT * FROM usuario WHERE Cuenta = '$cuenta' AND Password = '$password'";
-            $resultado = $conexion ->query($sql);
+            $pass = sha1($password);
+
+            $sql = "SELECT * FROM usuario WHERE Cuenta = '$cuenta' AND Password = '$pass'";
+            $resultado = $conexion->query($sql);
 
             if($resultado->num_rows){
                 echo "correcta";
@@ -28,7 +30,7 @@
             }
             
         }else{
-            echo "no llega nada";
+            echo $resultado;
             exit();
         }
     }
