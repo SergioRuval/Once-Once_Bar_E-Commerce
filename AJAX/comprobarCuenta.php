@@ -18,8 +18,17 @@
             $resultado = $conexion ->query($sql);
 
             if($resultado->num_rows){
-                echo "existe";
-                exit();
+
+                $sql = "SELECT * FROM usuario WHERE Bloqueo = 1 AND Cuenta = '$cuenta'";
+                $resultado = $conexion->query($sql);
+
+                if($resultado->num_rows){
+                    echo "bloqueada";
+                    exit();
+                }else{
+                    echo "existe";
+                    exit();
+                }
             }else{
                 echo "nuevo";
                 exit();

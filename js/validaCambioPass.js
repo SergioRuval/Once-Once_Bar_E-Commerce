@@ -1,13 +1,10 @@
-const inputCuenta = document.getElementById("inpCuenta");
-const inputPass = document.getElementById("inpPass");
-const inputIntentos = document.getElementById("intentos");
+const inputCuenta = document.getElementById("cuenta");
+const inputPass = document.getElementById("nueva");
+const inputConfPass = document.getElementById("confNueva");
 const btnSumbit = document.getElementById("submit");
 
 var cuentaCorrecta = false;
-var passCorrecta = false;
-var cuentaBloqueada = false;
-
-var intentos = 1;
+var passCorrecta = true;
 
 inputCuenta.addEventListener('input', function (event){
 
@@ -26,15 +23,35 @@ inputCuenta.addEventListener('input', function (event){
 });
 
 inputPass.addEventListener('input', function (event){
+    let regExp = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{6,16}$/; // Expresión regular para la contraseña
+
     if( inputPass.value.length < 6 || inputPass.value.length > 16 ){
         inputPass.style.color = "red";
         document.getElementsByClassName("msg-error")[1].style.display = "contents";
-        document.getElementsByClassName("msg-error-p")[1].innerText = "La contraseña debe estar entre 6 y 16 caracteres";
+        document.getElementsByClassName("msg-error-p")[1].innerText = "Mínimo 6 y máximo 16 caracteres";
         inputPass.setCustomValidity('Contraseña corta');
+    }else if(!regExp.test(inputPass.value)){
+        inputPass.style.color = "red";
+        document.getElementsByClassName("msg-error")[1].style.display = "contents";
+        document.getElementsByClassName("msg-error-p")[1].innerText = "Debe haber al menos: un dígito, una minúscula y una mayúscula.";
+        inputPass.setCustomValidity('Caracteres no permitidos');
     }else{
         inputPass.style.color = "black";
         document.getElementsByClassName("msg-error")[1].style.display = "none";
         inputPass.setCustomValidity('');
+    }
+});
+
+inputConfPass.addEventListener('input', function (event){
+    if( inputConfPass.value != inputPass.value ){
+        inputConfPass.style.color = "red";
+        document.getElementsByClassName("msg-error")[2].style.display = "contents";
+        document.getElementsByClassName("msg-error-p")[2].innerText = "Las contraseñas no coinciden";
+        inputConfPass.setCustomValidity("Contraseña no es igual a la original");
+    }else{
+        inputConfPass.style.color = "black";
+        document.getElementsByClassName("msg-error")[2].style.display = "none";
+        inputConfPass.setCustomValidity("");
     }
 });
 
@@ -50,16 +67,10 @@ inputCuenta.addEventListener('blur', function(){
 
     http.onreadystatechange = function () {
         if(this.readyState == 4 && this.status == 200){
-            if(this.responseText == "existe"){
+            if(this.responseText == "existe" || this.responseText == "bloqueada"){
                 cuentaCorrecta = true;
-            }else if(this.responseText == "bloqueada"){
-                cuentaCorrecta = false;
-                cuentaBloqueada = true;
-                inputCuenta.style.color = "red";
-                document.getElementsByClassName("msg-error")[0].style.display = "contents";
-                document.getElementsByClassName("msg-error-p")[0].innerText = "Su cuenta está bloqueada, cambie su contraseña para recuperarla";
-                inputCuenta.setCustomValidity("Cuenta bloqueada");
-            }else{
+                console.log("La cuenta existe");
+            }else {
                 cuentaCorrecta = false;
             }
         }
@@ -79,9 +90,9 @@ inputPass.addEventListener('blur', function(event){
     http.onreadystatechange = function () {
         if(this.readyState == 4 && this.status == 200){
             if(this.responseText == "correcta"){
-                passCorrecta = true;
-            }else if(this.responseText == "incorrecta"){
                 passCorrecta = false;
+            }else if(this.responseText == "incorrecta"){
+                passCorrecta = true;
             }else{
                 passCorrecta = false;
             }
@@ -91,24 +102,14 @@ inputPass.addEventListener('blur', function(event){
     console.log(inputPass.value);
 });
 
-
-
 btnSumbit.addEventListener('click', function (event){
-    if(!cuentaCorrecta || !passCorrecta && intentos <= 3){
+    if(!cuentaCorrecta || !passCorrecta){
         event.preventDefault();
         if(!cuentaCorrecta){
-            if(!cuentaBloqueada){
-                inputCuenta.style.color = "red";
+            inputCuenta.style.color = "red";
                 document.getElementsByClassName("msg-error")[0].style.display = "contents";
                 document.getElementsByClassName("msg-error-p")[0].innerText = "La cuenta no está registrada";
                 inputCuenta.setCustomValidity("Cuenta no registrada");
-            }else{
-                inputCuenta.style.color = "red";
-                document.getElementsByClassName("msg-error-p")[0].style.fontSize = "x-large";
-                document.getElementsByClassName("msg-error")[0].style.display = "contents";
-                document.getElementsByClassName("msg-error-p")[0].innerText = "¡Su cuenta está bloqueada, cambie su contraseña para recuperarla!";
-                inputCuenta.setCustomValidity("Cuenta bloqueada");
-            }
         }else{
             inputCuenta.style.color = "black";
             document.getElementsByClassName("msg-error")[0].style.display = "none";
@@ -118,17 +119,12 @@ btnSumbit.addEventListener('click', function (event){
             console.log("Debería entrar aquí");
             inputPass.style.color = "red";
             document.getElementsByClassName("msg-error")[1].style.display = "contents";
-            document.getElementsByClassName("msg-error-p")[1].innerText = "La contraseña es incorrecta";
+            document.getElementsByClassName("msg-error-p")[1].innerText = "No se puede ingresar una contraseña anterior";
             inputPass.setCustomValidity('Contraseña incorrecta');
-            intentos++;
         }else{
             inputPass.style.color = "black";
             document.getElementsByClassName("msg-error")[1].style.display = "none";
             inputPass.setCustomValidity('');
         }
-    }else if(intentos > 3){
-        inputIntentos.value = "bloquear";
-        inputPass.setCustomValidity("");
-        console.log("Bloqueada");
     }
 });
