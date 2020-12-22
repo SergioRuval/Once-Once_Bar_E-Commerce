@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ONCE:ONCE</title>
-    
+ 
     <link rel="stylesheet" href="css/formulario.css">
     <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
@@ -71,11 +71,22 @@
         ce%3AOnce%20Sport%20Bar!5e0!3m2!1ses-419!2smx!4v1607487335142!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;"
          allowfullscreen="" aria-hidden="false" tabindex="0"> </iframe></div>
     </div>
-    
-    <footer>
-        <div class="piedepagina">
-            <a class="textbottom blink_me"><strong>Aviso de Privacidad - Términos y Condiciones - ONCE:ONCE Copyright 2020</strong></a>
+    <div>
+        <div class="piedepagina1">
+            <a class="textbottom blink_me"><strong>¡Suscribete y recibe un cupón de compra!</strong></a>
         </div>
-    </footer>
+        <div>
+            <form class="form" action="correo2.php" method="POST">
+                <div class="form2">
+                <input type="text" class="email" name="email" placeholder="Email:">
+                <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="piedepagina">
+        <a class="textbottom blink_me"><strong>Aviso de Privacidad - Términos y Condiciones - ONCE:ONCE Copyright 2020</strong></a>
+    </div>
 </body>
 </html>
