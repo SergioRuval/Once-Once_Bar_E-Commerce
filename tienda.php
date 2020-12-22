@@ -48,64 +48,6 @@
             <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
             <p><button>Añadir al carrito</button></p>
         </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-        
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-    </div>
-
-    <div class="menu">
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-        
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
     </div>
 
     <footer>
