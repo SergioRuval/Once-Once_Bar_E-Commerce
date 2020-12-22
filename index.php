@@ -26,6 +26,7 @@
     ?>
 </div>
 
+
 <?php
     if(empty($_SESSION["CUENTA"])){
 ?>
