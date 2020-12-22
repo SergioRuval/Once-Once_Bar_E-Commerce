@@ -13,6 +13,7 @@
     $codPos=$_POST['codPostal'];
     $numTel=$_POST['phone'];
     $formaPago=$_POST['formaPago'];
+    $_SESSION['IDUsuario']=1;
     //$total=$_POST['total'];
     if(!isset($_SESSION['CUPON'])){
         $total=$_SESSION['TOTAL'];

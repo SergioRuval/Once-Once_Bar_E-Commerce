@@ -22,7 +22,10 @@
 <?php 
     if($_POST){
         $_SESSION['FORMAPAGO']=$_POST['formaPago'];
-        $_SESSION['DIGITOS']=$_POST['partCard4'];
+        $digitos=$_POST['partCard4'];
+        //Añadiendp los últimos 3 dígitos para nota
+        //$sentencia = $pdo->prepare("UPDATE `pago` SET `Digitos`=`111`, WHERE IDUsuario=2");
+        //$sentencia->execute();
 ?>
 
 <div class="container">
@@ -48,7 +51,7 @@
             Asimismo, hemos enviado a tu correo este recibo.</h4>
     </div>
     <div class="botonesCons">
-        <a href="nota.php" class="btn btn-warning" target="_blank" id="boleta">Recibo de Pago</a> <br> <br>
+        <a href="notaBase.php" class="btn btn-warning" target="_blank" id="boleta">Recibo de Pago</a> <br> <br>
         <a href="index.php" id="regreso">Regresar a Inicio</a>
     </div>
 </div>

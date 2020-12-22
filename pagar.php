@@ -209,13 +209,13 @@
         if(auxCupon != ""){
             switch(auxCupon){
                 case 'MIORDEN1':
-                    <?php if(!isset($_SESSION['C1'])){ ?>
+                    <?php if(!isset($_SESSION['CUPON'])){ ?>
                         document.getElementById("totalFinal").innerHTML = <?php echo $total*0.9?>;
                         
                         <?php 
                             $_SESSION['TOTAL_DESC']=$total*0.9;
                             $_SESSION['CUPON']="1";
-                            $_SESSION['C1']="1";
+                            //$_SESSION['C1']="1";
                         ?>
                         swal("¡EXCELENTE!", "Cupón aplicado correctamente.", "success");
                         document.getElementById("inputCupon").value = "";
@@ -226,6 +226,7 @@
                     <?php }else{?>
                         swal("¡OJO!", "El cupón ya ha sido aplicado.", "warning");
                         document.getElementById("inputCupon").value = "";
+                        
                     <?php }?>
 
                     break;

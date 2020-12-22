@@ -17,7 +17,8 @@
             Una vez consultada, puedes acudir a cualquier sucursal OXXO para concretar tu pedido.</h4>
     </div>
     <div class="botonesCons">
-        <a href="nota.php" class="btn btn-warning" target="_blank" id="boleta">Boleta de Pago</a> <br> <br>
+        <?php $_SESSION['FORMAPAGO']="OXXX"; ?>
+        <a href="notaBase.php" class="btn btn-warning" target="_blank" id="boleta">Boleta de Pago</a> <br> <br>
         <a href="index.php" id="regreso">Regresar a Inicio</a>
     </div>
 </div>
