@@ -6,6 +6,7 @@ var cuentaCorrecta = false;
 var passCorrecta = false;
 
 inputCuenta.addEventListener('input', function (event){
+
     let regExp = /^[a-zA-ZÁ-ÿ0-9]{6,20}$/;
 
     if(inputCuenta.value.length < 6 || inputCuenta.value.length > 20){
@@ -80,6 +81,7 @@ inputPass.addEventListener('blur', function(event){
 
 
 btnSumbit.addEventListener('click', function (event){
+    console.log("Entra aqui");
     if(!cuentaCorrecta && !passCorrecta){
         event.preventDefault();
         if(!cuentaCorrecta){

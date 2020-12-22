@@ -1,8 +1,8 @@
 <?php
-    $servidor = 'localhost';
-    $cuenta = 'root';
-    $password = '';
-    $bd = 'tienda';
+    $servidor = 'db5001359255.hosting-data.io';
+    $cuenta = 'dbu1107284';
+    $password = '5p1d3rm4n_G';
+    $bd = 'dbs1152604';
 
     $conexion = new mysqli($servidor,$cuenta,$password,$bd);
 
