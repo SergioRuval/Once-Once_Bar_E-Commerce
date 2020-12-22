@@ -37,7 +37,7 @@
     </div>
 
     <div class="regresar">
-        <p><a href="index.html" class="blink_me"><strong>Regresar a inicio</strong></a></p>
+        <p><a href="index.php" class="blink_me"><strong>Regresar a inicio</strong></a></p>
     </div>
     
     <div class="menu">
