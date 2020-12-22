@@ -20,7 +20,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-<link rel="shortcut icon" href="favicon.ico">
+<link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 
 <style>
     body{
@@ -58,7 +58,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
        Inicia Sesión
    </div>
 <div class="div1">
-    <form action="login.php" method="post" style=" text-align:center; width: 450px;" autocomplete="off">
+    <form action="php/login.php" method="post" style=" text-align:center; width: 450px;" autocomplete="off">
 		<p>
 			Usuario: <input name="cuenta" id="inpCuenta" class="form-control form-control-sm" type="text" required>
         </p>
@@ -72,7 +72,7 @@ integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xX
             <small class="msg-error-p">Este es un error jajajaja</small><br>
         </p>
 		<div class="form-group mt-2">
-		  <button type="submit" class="btn btn-primary btn-block">Iniciar Sesión</button>
+		  <button type="submit" class="btn btn-primary btn-block" id="submit">Iniciar Sesión</button>
 		 </div>
     </form>
 </div>

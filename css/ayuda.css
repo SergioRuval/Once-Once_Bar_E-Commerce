@@ -2,11 +2,6 @@ body{
     background-color: black;
 }
 
-.navbar{
-    background-color: #c5a3ff;
-    border: 1px solid black;
-}
-
 .blink_me1:hover{
     animation: blinker 1.7s linear infinite;
     cursor: pointer;

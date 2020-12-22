@@ -18,6 +18,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
+
 </head>
 <body>
     
@@ -47,73 +49,6 @@
     </div>
     
     <div class="menu">
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-        
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-    </div>
-
-    <script>
-        for (i = 0; ...){
-            if (i =){
-            }
-        }
-            
-        
-    </script>
-
-    <div class="menu">
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-
-        <div class="card">
-            <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
-            <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
-            <p><button>Añadir al carrito</button></p>
-        </div>
-        
         <div class="card">
             <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
             <h1>Smirnoff</h1>
