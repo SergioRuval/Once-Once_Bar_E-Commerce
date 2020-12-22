@@ -16,6 +16,41 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 
+    <style>
+    .dropbtn {
+        background-color: black;
+        color: white;
+        font-size: 30px;
+        cursor: pointer;
+        outline: none;
+    }
+
+    .dropbtn:hover, .dropbtn:focus {
+        text-shadow: 0 0 3px white;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f1f1f1;
+        min-width: 160px;
+        overflow: auto;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown a:hover {background-color: #ddd;}
+
+    .show {display: block;}
+
+</style>
 </head>
 <body>
     
@@ -25,9 +60,39 @@
             <p><a href="aboutus.html" class="buttonp1 blink_me"><strong>Acerca de Nosotros</strong></a></p>
             <p><a href="formulario.html" class="buttonp1 blink_me"><strong>Contacto</strong></a></p>
             <p><a href="ayuda.html" class="buttonp1 blink_me"><strong>Ayuda</strong></a></p>
-            <p><a href="tienda.html" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
+            <p><a href="#" class="buttonp1 blink_me"><strong><i class="fas fa-store fa-lg"></i></strong></a></p>
+            <div class="dropdown">
+                <span class="dropbtn"><strong><i class="fa fa-user-circle-o fa-lg" onclick="myFunction()" id="usuario"></i></strong></span>
+                <div id="myDropdown" class="dropdown-content">
+                  <a href="#home">Home</a>
+                  <a href="#about">About</a>
+                  <a href="#contact">Contact</a>
+                </div>
+            </div>
         </div>
     </div>
+
+    <script>
+        /* When the user clicks on the button, 
+        toggle between hiding and showing the dropdown content */
+        function myFunction() {
+          document.getElementById("myDropdown").classList.toggle("show");
+        }
+        
+        // Close the dropdown if the user clicks outside of it
+        window.onclick = function(event) {
+          if (!event.target.matches('#usuario')) {
+            var dropdowns = document.getElementsByClassName("dropdown-content");
+            var i;
+            for (i = 0; i < dropdowns.length; i++) {
+              var openDropdown = dropdowns[i];
+              if (openDropdown.classList.contains('show')) {
+                openDropdown.classList.remove('show');
+              }
+            }
+          }
+        }
+    </script>
     
     <div class="maindiv">
         <div class="div1"></div>
