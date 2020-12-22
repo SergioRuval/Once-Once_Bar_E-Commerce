@@ -99,3 +99,57 @@ inputConfPass.addEventListener('input', function (event){
         inputConfPass.setCustomValidity("");
     }
 });
+
+// Sección de implementación de ajax para validar la cuenta y el correo
+inputEmail.addEventListener('blur', function (event){
+    let entrada = inputEmail.value;
+
+    const url = 'AJAX/comprobarEmail.php';
+    let http = new XMLHttpRequest();
+
+    http.open("POST",url);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(`correo=${entrada}`);
+    http.onreadystatechange = function(){
+        if(this.readyState == 4 && this.status == 200){
+            if(this.responseText == "existe"){
+                inputEmail.style.color = "red";
+                inputEmail.style.borderColor = "red";
+                document.getElementsByClassName("msg-error")[1].style.display = "contents";
+                document.getElementsByClassName("msg-error-p")[1].innerText = "Este correo ya está registrado";
+                inputEmail.setCustomValidity("Correo electronico ya existente");
+            }else if(this.responseText == "nuevo"){
+                inputEmail.style.color = "black";
+                inputEmail.style.borderColor = "black";
+                document.getElementsByClassName("msg-error")[1].style.display = "none";
+                inputEmail.setCustomValidity("");
+            }
+        }
+    }
+});
+
+inputCuenta.addEventListener('blur', function (event){
+    let entrada = inputCuenta.value;
+
+    const url = 'AJAX/comprobarCuenta.php';
+    let http = new XMLHttpRequest();
+    http.open("POST",url);
+    http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+    http.send(`cuenta=${entrada}`);
+    http.onreadystatechange = function (){
+        if(this.readyState == 4 && this.status == 200){
+            if(this.responseText == "existe"){
+                inputCuenta.style.color = "red";
+                inputCuenta.style.borderColor = "red";
+                document.getElementsByClassName("msg-error")[2].style.display = "contents";
+                document.getElementsByClassName("msg-error-p")[2].innerText = "Esta cuenta ya está registrada";
+                inputEmail.setCustomValidity("Correo electronico ya existente");
+            }else if(this.responseText == "nuevo"){
+                inputCuenta.style.color = "black";
+                inputCuenta.style.borderColor = "black";
+                document.getElementsByClassName("msg-error")[2].style.display = "none";
+                inputCuenta.setCustomValidity("");
+            }
+        }
+    }
+});

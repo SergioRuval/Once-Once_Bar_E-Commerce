@@ -37,7 +37,7 @@
     </div>
 
     <div class="regresar">
-        <p><a href="index.html" class="blink_me"><strong>Regresar a inicio</strong></a></p>
+        <p><a href="index.php" class="blink_me"><strong>Regresar a inicio</strong></a></p>
     </div>
     
     <div class="menu">
@@ -73,15 +73,6 @@
             <p><button>Añadir al carrito</button></p>
         </div>
     </div>
-
-    <script>
-        for (i = 0; ...){
-            if (i =){
-            }
-        }
-            
-        
-    </script>
 
     <div class="menu">
         <div class="card">
