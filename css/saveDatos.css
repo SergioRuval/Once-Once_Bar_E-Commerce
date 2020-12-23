@@ -1,0 +1,148 @@
+
+#detalles{
+    font-size: 40px;
+    text-align: center;
+}
+
+.logo{
+    background-color: black;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: flex-end;
+}
+
+.nomPago{
+    color:white;
+}
+
+#nom{
+    font-size: 70px;
+}
+
+#logOXXO{
+    width: 200px;
+    height: 100px;
+    background-color: black;
+}
+
+/* ----- BBVA y Santander ----- */
+
+#logBBVA{
+    width: 300px;
+    height: 100px;
+}
+
+#logSan{
+    width: 400px;
+    height: 90px;
+}
+
+#datosCard{
+    display: flex;
+    flex-direction: column;
+}
+
+.soloDatos{
+    display: flex;
+    justify-content: center;
+}
+
+.numCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 5 1 auto;
+    padding: 1rem;
+}
+
+.digitos{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+#partCard{
+    text-align: center;
+    margin-left: 5px;
+}
+
+#seCode{
+    text-align: center;
+}
+
+.fechaVenc{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2 1 auto;
+    padding: 1rem;
+}
+
+.securityCode{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 2 1 auto;
+    padding: 1rem;
+}
+
+.btnSend{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: 2rem;
+}
+
+#terminar{
+    font-size: 25px;
+}
+
+#partCard:hover{
+    border: 2px solid orange;
+    border-radius: 1px;
+}
+
+#fecha:hover{
+    border: 2px solid orange;
+    border-radius: 1px;
+}
+
+#seCode:hover{
+    border: 2px solid orange;
+    border-radius: 1px;
+}
+
+/* ----- GENERAL ----*/
+
+.indicacion{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.botonesCons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+a{
+    width: 50%;
+}
+
+#boleta{
+    font-size: 40px;
+    border-radius: 10px;
+}
+
+#regreso{
+    text-align: center;
+    color: black;
+}
+
+#regreso:hover{
+    text-decoration: overline;
+}
