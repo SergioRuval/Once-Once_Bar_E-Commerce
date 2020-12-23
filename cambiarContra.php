@@ -6,7 +6,11 @@
     <link rel='icon' href='images/favicon.ico' type='image/x-icon'>
     <title>Cambiar Contraseña</title>
     
+<<<<<<< HEAD
     <link rel="stylesheet" href="cambiarcontra.css">
+=======
+    <link rel="stylesheet" href="css/cambiarcontra.css">
+>>>>>>> 7529ccf25e21034d7dd455c5be856c6058c2c372
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
