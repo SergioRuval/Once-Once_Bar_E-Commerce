@@ -14,7 +14,7 @@ $pagosActual=$sentencia->fetchAll(PDO::FETCH_ASSOC);
 
 $pagoActual = [];
 foreach($pagosActual as $i=>$pago){
-    if($pago['IDUsuario']==2){
+    if($pago['IDUsuario']==21){
         $pagoActual = $pago;
         break;
     }
@@ -114,7 +114,7 @@ $pdf->Cell(20);
 $pdf->Cell(8,10,utf8_decode('Dirección:'),0,0,'C');
 $pdf->SetFont('Courier','',11);
 $pdf->Cell(20);
-$pdf->Cell(30,10,utf8_decode($pagoActual['Direccion']),0,0,'C');
+$pdf->Cell(60,10,utf8_decode($pagoActual['Direccion']),0,0,'C');
 $pdf->Ln(5);
 
 $pdf->SetFont('Courier','B',11);
@@ -148,7 +148,13 @@ $pdf->Cell(5);
 $pdf->Cell(39,10,utf8_decode('País:'),0,0,'C');
 $pdf->SetFont('Courier','',11);
 $pdf->Cell(6);
-$pdf->Cell(1,10,utf8_decode($pais),0,0,'C');
+
+if($pagoActual['Pais']=="MX"){
+    $pdf->Cell(1,10,utf8_decode('MÉXICO'),0,0,'C');
+}else{
+    $pdf->Cell(1,10,utf8_decode('ESTADOS UNIDOS'),0,0,'C');
+}
+
 $pdf->Ln(5);
 
 $pdf->SetFont('Courier','B',11);
@@ -204,7 +210,26 @@ $pdf->Ln(5);
 $pdf->SetFont('Arial','I',11);
 $pdf->Cell(150,10,'TOTAL',0,0,'R');
 $pdf->Ln(5);
-$pdf->Cell(173,1,'$'.number_format($pagoActual['Total'],2),0,0,'R');
+$pdf->Cell(173,1,'$'.number_format($pagoActual['TotalFinal'],2),0,0,'R');
+$pdf->Ln(5);
+
+if($pagoActual['TotalOriginal']>500){
+    $pdf->Cell(175,10,utf8_decode('* Envío gratis'),0,0,'R');
+}else{
+    $pdf->Cell(175,10,utf8_decode('+ $100.00 de envío'),0,0,'R');
+}
+
+$pdf->Ln(10);
+
+if($pagoActual['Pais']=="MX"){
+    $pdf->Cell(173,1,'+ 5% IVA sobre producto (MX) $'.number_format($pagoActual['Impuesto'],2),0,0,'R');
+}else{
+    $pdf->Cell(173,1,'+ 10% IVA sobre producto (USA) $'.number_format($pagoActual['Impuesto'],2),0,0,'R');
+}
+
+$pdf->Ln(5);
+
+$pdf->Cell(173,1,$pagoActual['Cupones'],0,0,'R');
 
 
 //Pie de página

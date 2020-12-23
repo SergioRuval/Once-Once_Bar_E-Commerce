@@ -10,35 +10,39 @@
     $dir=$_POST['direccion'];
     $ciudad=$_POST['city'];
     $edo=$_POST['estado'];
+    $pais=$_POST['pais'];
     $codPos=$_POST['codPostal'];
     $numTel=$_POST['phone'];
     $formaPago=$_POST['formaPago'];
-    $_SESSION['IDUsuario']=1;
-    //$total=$_POST['total'];
-    if(!isset($_SESSION['CUPON'])){
-        $total=$_SESSION['TOTAL'];
-    }else{
-        $total=$_SESSION['TOTAL_DESC'];
-    }
+    //$totalOrigin=$_POST['totalOriginal']; 
+    $totalOrigin=$_SESSION['TOTALORIGINAL'];
+    $totalFinal=$_SESSION['TOTALFINAL'];
+    $iva=$_SESSION['IVA'];
+    $cupones=$_SESSION['CUPONES'];
 
     //Guardando los datos en la BD de Pago
+    //Falta comparar con el valor del usuario en sesión
     
     $sentencia = $pdo->prepare("INSERT INTO `pago` 
-       (`IDPago`, `ClvTranscc`, `IDUsuario`, `Direccion`, `Ciudad`, `Estado`, `CP`, `NumTel`, `FormaPago`, `Total`) 
-    VALUES (NULL, :ClvTranscc, '5', :Direccion, :Ciudad, :Estado, :CP, :NumTel, :FormaPago, :Total);");
+       (`IDPago`, `ClvTranscc`, `IDUsuario`, `Direccion`, `Ciudad`, `Estado`, `Pais`, `CP`, `NumTel`, `FormaPago`,  `TotalOriginal`, `TotalFinal`, `Impuesto`, `Cupones`) 
+    VALUES (NULL, :ClvTranscc, '21', :Direccion, :Ciudad, :Estado, :Pais, :CP, :NumTel, :FormaPago,:TotalOriginal, :TotalFinal, :Impuesto,     :Cupones);");
 
     $sentencia->bindParam(":ClvTranscc",$SID);
     $sentencia->bindParam(":Direccion",$dir);
     $sentencia->bindParam(":Ciudad",$ciudad);
     $sentencia->bindParam(":Estado",$edo);
+    $sentencia->bindParam(":Pais",$pais);
     $sentencia->bindParam(":CP",$codPos);
     $sentencia->bindParam(":NumTel",$numTel);
     $sentencia->bindParam(":FormaPago",$formaPago);
-    $sentencia->bindParam(":Total",$total);
-    //$sentencia->execute();
+    $sentencia->bindParam(":TotalOriginal",$totalOrigin);
+    $sentencia->bindParam(":TotalFinal",$totalFinal);
+    $sentencia->bindParam(":Impuesto",$iva);
+    $sentencia->bindParam(":Cupones",$cupones);
+    $sentencia->execute();
 
     //Se obtiene para establecer los detalles de la venta realizada por el pago
-    $idVenta=$pdo->lastInsertId();
+    //$idVenta=$pdo->lastInsertId();
 
     echo "llegue";
 ?>

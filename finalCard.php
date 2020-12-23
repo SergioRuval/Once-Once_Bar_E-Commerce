@@ -21,11 +21,11 @@
 
 <?php 
     if($_POST){
-        $_SESSION['FORMAPAGO']=$_POST['formaPago'];
         $digitos=$_POST['partCard4'];
+        echo $digitos;
         //Añadiendp los últimos 3 dígitos para nota
-        //$sentencia = $pdo->prepare("UPDATE `pago` SET `Digitos`=`111`, WHERE IDUsuario=2");
-        //$sentencia->execute();
+        $sentencia = $pdo->prepare("UPDATE `pago` SET `Digitos`=$digitos, WHERE IDUsuario=21");
+        $sentencia->execute();
 ?>
 
 <div class="container">
