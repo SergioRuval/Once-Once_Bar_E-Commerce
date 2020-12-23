@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cambiar Contraseña</title>
     
-    <link rel="stylesheet" href="../css/cambiarcontra.css">
+    <link rel="stylesheet" href="cambiarcontra.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -22,28 +22,33 @@
 <body>
 
     <div class="password">
-        <h1>Cambiar la contraseña:</h1>
-        <h2>¡¡Hecho demasiados intentos!!</h2>
-        <form action="php/changePass.php" autocomplete="off" method="POST">
-            <label for="cuenta">Nombre de cuenta</label><br>
-            <input type="text" name="cuenta" id="cuenta" required>
-            <p class="msg-error ">
-                <small class="msg-error-p mb-5">Este es un error</small>
-            </p>
-            <label for="nueva">Nueva contraseña</label><br>
-            <input type="password" name="nueva" id="nueva" required>
-            <p class="msg-error ">
-                <small class="msg-error-p mb-5">Este es un error</small>
-            </p>
-            <label for="confNueva">Confirmar contraseña</label><br>
-            <input type="password" name="confNueva" id="confNueva" required>
-            <p class="msg-error ">
-                <small class="msg-error-p mb-5">Este es un error</small>
-            </p>
-             <input type="submit" value="Confirmar" id="submit">
-        </form>
-        <a href="index.php">Volver a inicio</a>
-    </div>
+        <div class="header">
+            <h1>Cambio de contraseña</h1>
+            <h2>Has sobrepasado el límite de intentos</h2>
+        </div>
+        <div class="form">
+            <form action="php/changePass.php" autocomplete="off" method="POST">
+                <p><label for="cuenta">Nombre de cuenta</label><br>
+                    <input type="text" name="cuenta" id="cuenta"  class="mytext" required></p>
+                <p class="msg-error">
+                    <small class="msg-error-p mb-5">Este es un error</small>
+                </p>
+                <p><label for="nueva">Nueva contraseña</label><br>
+                    <input type="password" name="nueva" id="nueva" required class="mytext"></p>
+                <p class="msg-error ">
+                    <small class="msg-error-p mb-5">Este es un error</small>
+                </p>
+                <p><label for="confNueva">Confirmar contraseña</label><br>
+                    <input type="password" name="confNueva" id="confNueva" required class="mytext"></p>
+                <p class="msg-error ">
+                    <small class="msg-error-p mb-5">Este es un error</small>
+                </p>
+                 <input type="submit" value="Confirmar" id="submit" class="confirm">
+            </form>
+            <br>
+            <a href="index.php">Volver a inicio</a>
+        </div>
+        </div>
 
     <script src="js/validaCambioPass.js"></script>
 </body>

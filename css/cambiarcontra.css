@@ -1,10 +1,71 @@
 body{
-    width: 100%;
     background-color: black;
 }
 
 .password{
-    margin: 100px;
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
+
+.header{
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: red;
+    text-shadow: 0 0 3px white;
+    font-size: 26px;
+}
+
+.form{
+    text-align: center;
+    margin-top: 40px;
+}
+
+.form form{
+    font-size: 20px;
+}
+
+.form a{
+    font-size: 18px;
+    text-decoration: none;
+    color: red;
+    background-color: black;
+    border-radius: 8px;
+    transition: .6s;
+}
+
+.form a:hover{
+    transition: .6s;
+    color: white;
+}
+
+.confirm{
+    border-radius: 8px;
+    font-size: 17px;
+    padding: 5px;
+    font-family: 'Montserrat', sans-serif;
+    transition: .6s;
+}
+
+.confirm:hover{
+    transition: .6s;
+    background-color: lightblue;
+    cursor: pointer;
+}
+
+.mytext{
+    width: 400px;   
+    height: 25px;
+    font-size: 15px;
+    border-radius: 7px;
+}
+
+.msg-error{
+        display: none;
+        text-align: center;
+    }
+
+.msg-error small {
+        color: red;
+    }
