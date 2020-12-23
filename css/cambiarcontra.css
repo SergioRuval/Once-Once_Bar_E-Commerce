@@ -1,0 +1,10 @@
+body{
+    width: 100%;
+    background-color: black;
+}
+
+.password{
+    margin: 100px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+}
