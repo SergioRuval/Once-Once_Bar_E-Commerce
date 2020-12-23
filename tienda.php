@@ -48,12 +48,70 @@
         <p><a href="index.php" class="blink_me"><strong>Regresar a inicio</strong></a></p>
     </div>
     
+
+    <!-- PRODUCTOS -->
     <div class="menu">
+
         <div class="card">
             <img src="images/menu/smirnoff.jpg" alt="Denim Jeans" style="width:100%">
             <h1>Smirnoff</h1>
-            <p class="price">$19.99</p>
-            <p>Some text about the jeans. Super slim and comfy lorem ipsum lorem jeansum. Lorem jeamsun denim lorem jeansum.</p>
+            <p class="price">$450.00</p>
+            <p>750 ml.</p>
+            <p><button>Añadir al carrito</button></p>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/victoria.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Cerveza Victoria</h1>
+            <p class="price">$22.00</p>
+            <p>355 ml.</p>
+            <p><button>Añadir al carrito</button></p>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/1800.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>1800 Cristalino</h1>
+            <p class="price">$990.00</p>
+            <p>700 ml.</p>
+            <p><button>Añadir al carrito</button></p>
+        </div>
+
+        <div class="card">
+            <img src="images/menu/corona.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Cerveza Corona</h1>
+            <p class="price">$22.00</p>
+            <p>355 ml.</p>
+            <p><button>Añadir al carrito</button></p>
+        </div>
+    </div>
+
+    <div class="menu">
+        <div class="card">
+            <img src="images/menu/boneless.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Boneless 10</h1>
+            <p class="price">$90.00</p>
+            <p>Deliciosas alitas de pollo sin hueso, bañadas en salsa bufalo</p>
+            <p><button>Añadir al carrito</button></p>
+        </div>
+        <div class="card">
+            <img src="images/menu/hawai.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Hamburguesa Hawaina</h1>
+            <p class="price">$60.00</p>
+            <p>Carne de res, piña, jamón, queso americano. Incluyen papas gajo</p>
+            <p><button>Añadir al carrito</button></p>
+        </div>
+        <div class="card">
+            <img src="images/menu/papas.png" alt="Denim Jeans" style="width:100%">
+            <h1>Papas Arrachera</h1>
+            <p class="price">$80.00</p>
+            <p>Papas a la francesa con queso para nachos y carne de arrachera (250gr).</p>
+            <p><button>Añadir al carrito</button></p>
+        </div>
+        <div class="card">
+            <img src="images/menu/parrillada.jpg" alt="Denim Jeans" style="width:100%">
+            <h1>Parrillada Arrachera</h1>
+            <p class="price">$110.00</p>
+            <p>Acompañada de cebollitas, tortillas, chile guero, guacamole.</p>
             <p><button>Añadir al carrito</button></p>
         </div>
     </div>
