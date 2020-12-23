@@ -1,7 +1,5 @@
 <?php
 //Para almacenar información de productos a comprar
-session_start();
-
 $mensaje="";
 
 if(isset($_POST['btnAccion'])){
