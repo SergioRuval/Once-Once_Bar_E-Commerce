@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Estadísticas</title>
 
-    <link rel="stylesheet" href="/css/stats.css">
+    <link rel="stylesheet" href="../css/stats.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -19,7 +19,7 @@
 </head>
 <body>
     
-    <div class="exit"><a href="admin.html">Regresar</a></div>
+    <div class="exit"><a href="admin.php">Regresar</a></div>
     <div class="text">Estadísticas</div>
     <div class="graphs">
         <div class="graph1"></div>

@@ -6,7 +6,7 @@
     <title>Estadísticas</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/inventario.css">
+    <link rel="stylesheet" href="../css/inventario.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
@@ -17,12 +17,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
+    <script src="js-admin/bajas.js"></script>
 </head>
 <body>
     <div class="navbar">
-        <a href="altas.html">Altas</a>
-        <a href="bajas.html">Bajas</a>
-        <a href="cambios.html">Cambios</a>
+        <a href="altas.php">Altas</a>
+        <a href="bajas.php">Bajas</a>
+        <a href="cambios.php">Cambios</a>
     </div>
 
     <div class="father">
@@ -30,21 +33,32 @@
             <form>
                 <div class="form-row">
                     <div class="form-group col-md-6">
-                        <label for="inputEmail4">Categoría</label>
-                        <input type="email" class="form-control" id="inputEmail4">
-                    </div>
-                    <div class="form-group col-md-6">
                         <label for="inputPassword4">ID del producto</label>
-                        <input type="password" class="form-control" id="inputPassword4">
+                        <input type="number" class="form-control" id="id_prod" name="id_prod">
                     </div>
                 </div>
                 <br>
-                <button type="submit" class="btn btn-primary center">Eliminar</button>
-                <button type="submit" class="btn btn-primary center">Regresar a inicio</button>
+                <button type="button" class="btn btn-primary center" onclick="Bajar()">Eliminar</button>
+                <a type="button" class="btn btn-primary center" href="admin.html">Regresar a inicio</a>
             </form>
         </div>
         <div class="end2">
-            adasdasd
+        <h3 class="titulo">Productos</h3>
+            <div class="datagrid">
+                <table>
+                    <tr>
+                        <th>Id Producto</th>
+                        <th>Nombre</th>
+                        <th>Categoría</th>
+                        <th>Precio</th>
+                        <th>Descripción</th>
+                        <th>Existencia</th>
+                    </tr>
+                    <tbody id="productos">
+
+                    </tbody>
+                </table>
+            </div>
         </div>
         </div>
 

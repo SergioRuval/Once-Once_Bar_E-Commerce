@@ -31,7 +31,6 @@ body{
 .father{
     width: 100%;
     display: flex;
-    align-items: center;
 }
 
 .end1{
@@ -48,4 +47,15 @@ body{
 .center{
     background-color: black;
     border: 1px solid black;
+}
+
+.titulo{
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+    text-align: center;
+}
+
+th, td {
+    padding: 2% 5%;
 }
