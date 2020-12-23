@@ -20,6 +20,7 @@
 
     <!-- Scripts -->
     <script src="js-admin/cambios.js"></script>
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 </head>
 <body>
     <div class="navbar">

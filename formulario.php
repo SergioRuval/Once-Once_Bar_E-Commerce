@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>ONCE:ONCE</title>
-    
+ 
     <link rel="stylesheet" href="css/formulario.css">
     <link rel="stylesheet" href="css/navbar.css">
     <script src="https://kit.fontawesome.com/25f85f35ef.js" crossorigin="anonymous"></script>
@@ -16,6 +16,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 
 </head>
 <body>
@@ -34,18 +35,18 @@
     
     <div id="form2">
         <div id="form3">
-            <form action="action_page.php">
+            <form action="correo.php" method="POST">
                 <div class="container">
                     <h2>¿Quieres contarnos algo?</h2>
                     <p align="center">¡Ingresa tu mensaje y nos pondremos en contacto contigo!</p>
                 </div>
                 <div class="container" style="background-color:white">
                     <label for="namez"> Nombre:</label>
-                    <input type="text" name="name" required id="namez">
+                    <input type="text" name="name" id="namez" required>
                     <label for="mail"> Mail:</label>
-                    <input type="text" name="mail" required>
+                    <input type="text" name="mail" required> 
                     <label for="message">Mensaje:</label>
-                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                    <textarea name="mensaje" id="" cols="30" rows="10" required></textarea>
                     <label>
                         <input type="checkbox" checked="checked" name="subscribe"> Sucribirse a nuestro newsletter
                     </label>
@@ -70,11 +71,22 @@
         ce%3AOnce%20Sport%20Bar!5e0!3m2!1ses-419!2smx!4v1607487335142!5m2!1ses-419!2smx" width="600" height="450" frameborder="0" style="border:0;"
          allowfullscreen="" aria-hidden="false" tabindex="0"> </iframe></div>
     </div>
-    
-    <footer>
-        <div class="piedepagina">
-            <a class="textbottom blink_me"><strong>Aviso de Privacidad - Términos y Condiciones - ONCE:ONCE Copyright 2020</strong></a>
+    <div>
+        <div class="piedepagina1">
+            <a class="textbottom blink_me"><strong>¡Suscribete y recibe un cupón de compra!</strong></a>
         </div>
-    </footer>
+        <div>
+            <form class="form" action="correo2.php" method="POST">
+                <div class="form2">
+                <input type="text" class="email" name="email" placeholder="Email:">
+                <button type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="piedepagina">
+        <a class="textbottom blink_me"><strong>Aviso de Privacidad - Términos y Condiciones - ONCE:ONCE Copyright 2020</strong></a>
+    </div>
 </body>
 </html>

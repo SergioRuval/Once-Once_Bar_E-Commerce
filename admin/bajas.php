@@ -20,6 +20,7 @@
 
     <!-- Scripts -->
     <script src="js-admin/bajas.js"></script>
+    <link rel='icon' href='../images/favicon.ico' type='image/x-icon'>
 </head>
 <body>
     <div class="navbar">
